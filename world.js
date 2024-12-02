@@ -1,13 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("lookup").addEventListener("click", () => {
+    document.getElementById("lookup-country").addEventListener("click", () => {
         const country = document.getElementById("country").value;
-        const resultDiv = document.getElementById("result");
+        fetchData(country, "country");
+    });
 
+    document.getElementById("lookup-cities").addEventListener("click", () => {
+        const country = document.getElementById("country").value;
+        fetchData(country, "cities");
+    });
+
+    function fetchData(country, lookupType) {
+        const resultDiv = document.getElementById("result");
+        
         // Create a new XMLHttpRequest object
         const xhr = new XMLHttpRequest();
 
-        // Configure it: GET-request for the URL /world.php?country=country_name
-        xhr.open("GET", `world.php?country=${country}`, true);
+        // Configure it: GET-request for the URL /world.php with appropriate parameters
+        xhr.open("GET", `world.php?country=${country}&lookup=${lookupType}`, true);
 
         // Set up a function to handle the response
         xhr.onreadystatechange = function () {
@@ -22,5 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Send the request
         xhr.send();
-    });
+    }
 });
