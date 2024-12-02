@@ -1,1 +1,47 @@
-/* Add your own styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    margin-top: 20px;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#country {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+#lookup {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#lookup:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
